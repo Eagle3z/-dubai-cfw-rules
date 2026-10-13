@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قوانين سيرفر Dubai CFW</title>
+    <title>قوانين سيرفر Dubai CFW الشاملة</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,8 @@
             --text-main: #e2e8f0;
             --text-muted: #94a3b8;
             --border-color: #1e293b;
+            --danger-color: #f87171;
+            --warning-bg: rgba(239, 68, 68, 0.1);
         }
 
         * {
@@ -31,7 +33,7 @@
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.8;
-            padding-bottom: 50px;
+            padding-bottom: 60px;
             background-image: radial-gradient(circle at 50% 0%, rgba(0, 114, 255, 0.15) 0%, transparent 50%);
         }
 
@@ -44,8 +46,8 @@
         }
 
         .logo-container {
-            width: 180px;
-            height: 180px;
+            width: 170px;
+            height: 170px;
             margin: 0 auto 20px auto;
             position: relative;
         }
@@ -69,7 +71,7 @@
         }
 
         .server-title {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             color: #ffffff;
             font-weight: 900;
             letter-spacing: 1px;
@@ -85,9 +87,19 @@
 
         /* Layout Container */
         .container {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: 30px auto;
             padding: 0 20px;
+        }
+
+        .section-header {
+            font-size: 1.6rem;
+            color: #ffffff;
+            border-right: 4px solid var(--accent-blue);
+            padding-right: 15px;
+            margin: 35px 0 20px 0;
+            font-weight: 800;
+            text-shadow: 0 0 8px rgba(0, 210, 255, 0.4);
         }
 
         .rules-grid {
@@ -109,7 +121,7 @@
 
         .rule-card:hover {
             border-color: var(--accent-blue);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 210, 255, 0.15);
         }
 
@@ -125,19 +137,19 @@
 
         .rule-content {
             color: var(--text-main);
-            font-size: 1rem;
+            font-size: 0.98rem;
         }
 
         .rule-content ul {
             list-style: none;
-            padding-right: 10px;
+            padding-right: 5px;
             margin-top: 10px;
         }
 
         .rule-content ul li {
             position: relative;
             margin-bottom: 10px;
-            padding-right: 20px;
+            padding-right: 22px;
         }
 
         .rule-content ul li::before {
@@ -145,13 +157,13 @@
             color: var(--accent-blue);
             position: absolute;
             right: 0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .rule-warning {
-            background: rgba(239, 68, 68, 0.1);
+            background: var(--warning-bg);
             border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #f87171;
+            color: var(--danger-color);
             padding: 10px 15px;
             border-radius: 8px;
             margin-top: 12px;
@@ -161,19 +173,26 @@
 
         .safe-zone-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
             margin-top: 15px;
         }
 
         .safe-zone-item {
             background: rgba(0, 210, 255, 0.05);
-            padding: 10px 15px;
+            padding: 12px 15px;
             border-radius: 8px;
-            border: 1px solid rgba(0, 210, 255, 0.15);
+            border: 1px solid rgba(0, 210, 255, 0.2);
             font-size: 0.95rem;
             color: #cbd5e1;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .safe-zone-item::before {
+            content: "🛡️";
+            font-size: 1rem;
         }
 
         /* Footer */
@@ -188,11 +207,14 @@
 
         @media (max-width: 768px) {
             .server-title {
-                font-size: 1.7rem;
+                font-size: 1.8rem;
             }
             .logo-container {
-                width: 140px;
-                height: 140px;
+                width: 130px;
+                height: 130px;
+            }
+            .rule-card {
+                padding: 18px;
             }
         }
     </style>
@@ -205,40 +227,175 @@
             <img src="logo.jpg" alt="Dubai CFW Logo">
         </div>
         <div class="server-title">DUBAI CFW</div>
-        <div class="server-subtitle">القوانين العامة لتمثيل الشخصية (Roleplay)</div>
+        <div class="server-subtitle">اللائحة الرسمية للقوانين والنظام العام للسيرفر</div>
     </header>
 
     <div class="container">
+
+        <!-- القسم الأول: المصطلحات الهامة -->
+        <div class="section-header">أولاً : مصطلحات هامة في اللعبة</div>
         <div class="rules-grid">
 
-            <!-- 1. الرول بلاي -->
             <div class="rule-card">
                 <div class="rule-title">الرول بلاي ( التمثيل ) - Roleplay</div>
                 <div class="rule-content">
-                    تقمص وتمثيل الشخصية قولاً وفعلاً مع مراعاة مجريات أحداث اللعبة وما يدور من حولك في المنطقة (باختصار تعيش الدور).
-                    <br><br>
-                    <span style="color: var(--accent-blue); font-weight: 600;">★ يعتبر التمثيل إلزامي للجميع (باستثناء المراقبين) وشرط جوهري في السيرفر.</span>
+                    تقمص وتمثيل الشخصية قولا وفعلا مع مراعاة مجريات احداث اللعبة وما يدور من حولك في المنطقة (باختصار تعيش الدور).
+                    <div class="rule-warning" style="background: rgba(0, 210, 255, 0.1); border-color: rgba(0, 210, 255, 0.3); color: var(--accent-blue);">
+                        يعتبر التمثيل الزامي للجميع ( باستثناء المراقبين ) وشرط جوهري في السيرفر.
+                    </div>
                 </div>
             </div>
 
-            <!-- 2. RDM -->
             <div class="rule-card">
                 <div class="rule-title">القتل العشوائي - RDM</div>
                 <div class="rule-content">
-                    قتل الأشخاص دون سبب أو تهديد أو بطريقة عشوائية.
-                    <div class="rule-warning">القتل العشوائي ممنوع ومخالف للنظام العام للسيرفر.</div>
+                    قتل الاشخاص دون سبب او تهديد او بطريقة عشوائية.
+                    <div class="rule-warning">ويعتبر القتل العشوائي ممنوع ومخالف للنظام العام للسيرفر.</div>
                 </div>
             </div>
 
-            <!-- 3. VDM -->
             <div class="rule-card">
-                <div class="rule-title">الدهس أو الصدم بالمركبة - VDM</div>
+                <div class="rule-title">الدهس او الصدم بالمركبة - VDM</div>
                 <div class="rule-content">
                     استخدام المركبة كسلاح لقتل الأشخاص.
-                    <div class="rule-warning">القتل عن طريق الصدم بالمركبة ممنوع ومخالف للنظام العام للسيرفر.</div>
+                    <div class="rule-warning">ويعتبر القتل عن طريق الصدم بالمركبة ممنوع ومخالف للنظام العام للسيرفر.</div>
                 </div>
             </div>
 
-            <!-- 4. تقدير الحياة -->
             <div class="rule-card">
-                <div class="rule-
+                <div class="rule-title">تقدير حياتك (Value Your Life)</div>
+                <div class="rule-content">
+                    دائما قدر حياتك وحياة الاخرين، لا تستهين بقتل الأشخاص وكذلك لا تقاوم المجرم او المجرمين اذا كانوا مسلحين وانت اعزل.
+                    <ul>
+                        <li>هذا لا يمنع استعمالك حق الدفاع عن النفس عند الضرورة التي تمنعك من طلب مساعدة من رجال الأمن.</li>
+                        <li>لا يمنع رجال الأمن من استعمال القوة عند الضرورة لمنع الجريمة وانقاذ الارواح.</li>
+                        <li>بكل الأحوال يجب مراعاة التمثيل ومحاورة الآخرين بشكل جيد وكافي قبل الشروع بأي عمل يعرض حياة الآخرين للخطر.</li>
+                    </ul>
+                    <div class="rule-warning" style="background: rgba(0, 210, 255, 0.1); border-color: rgba(0, 210, 255, 0.3); color: var(--accent-blue);">
+                        ويعتبر تقدير الحياة شرط جوهري في السيرفر.
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-card">
+                <div class="rule-title">المناطق الآمنة (Safe Zones)</div>
+                <div class="rule-content">
+                    هي مناطق منزوعة السلاح يمنع فيها القتل او التخريب، ويتم تحديدها من جهة السيرفر. وتعتبر المناطق التالية مع جميع الشوارع بالقرب منها مناطق آمنة ويمنع فيها الخطف أو القتل أو أي عمل إجرامي:
+                    
+                    <div class="safe-zone-grid">
+                        <div class="safe-zone-item">الحديقة العامة وضواحيها وشوارعها</div>
+                        <div class="safe-zone-item">المطاعم في المدينة بشكل كامل</div>
+                        <div class="safe-zone-item">الورش وجميع الشوارع بالقرب منها</div>
+                        <div class="safe-zone-item">مناطق التدوير الشاملة وشوارعها</div>
+                        <div class="safe-zone-item">المراكز الحكومية وضواحيها</div>
+                        <div class="safe-zone-item">معارض السيارات والشوارع المحيطة</div>
+                        <div class="safe-zone-item">أماكن الوظائف وكافة شوارعها</div>
+                    </div>
+                    <br>
+                    <strong style="color: var(--accent-blue);">ملاحظة:</strong> يستثنى من ذلك السيناريوهات المرتبه من قبل الادارة أو بشكل جيد من قبل المواطن.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- القسم الثاني: القوانين العامة -->
+        <div class="section-header">ثانياً : قوانين عامة وضوابط السيرفر</div>
+        <div class="rules-grid">
+
+            <div class="rule-card">
+                <div class="rule-title">السلوك العام والتفاعل مع اللعبة</div>
+                <div class="rule-content">
+                    <ul>
+                        <li><strong>الشخصية الافتراضية:</strong> ممنوع استخدام الشخصية الإفتراضية (شخصية البداية). يجب تغيير ملامح وملابس الشخصية وتخصيصها بملامح مميزة وملابس صحيحة.</li>
+                        <li><strong>ملاحقة العسكر:</strong> ممنوع ملاحقة العسكر والتدخل بعملهم (مثل تسأل ليش قاطع اشارة حمراء بدون سبب؟).</li>
+                        <li><strong>الكتابة والتواصل:</strong> ممنوع الكتابة خارج التمثيل في الشات إلا باستعمال رمز (خارج/) وعند الضرورة فقط بدون تكرار. لا تتحاور في شات اللعبة نهائياً وهو مخصص للكتابة في التمثيل فقط.</li>
+                        <li><strong>المعدات الصوتية:</strong> لازم تشغل المايك والسماعة وتتكلم حتى تتواصل مع باقي اللاعبين. ممنوع التحدث صوتياً من وراء الجدار أو من داخل السيارة من مسافة بعيدة.</li>
+                        <li><strong>مغير الصوت:</strong> ممنوع استعمال برنامج تغيير الصوت إلا في حالة مكبر الصوت للدوريات.</li>
+                        <li><strong>استغلال الثغرات:</strong> ممنوع استغلال الثغرات البرمجية (قلتشات)، برامج الغش، أو محاولة اختراق برمجة السيرفر والتلاعب بالبيانات. أنت مسؤول عن الإبلاغ عن وجود أي قلتش.</li>
+                        <li><strong>التطبيقات والجوال:</strong> استعمل التطبيقات في الجوال لطلب الخدمات المتاحة وعدم استعمال شات الجريدة لذلك. يمنع طلب الخدمات بقصد الخطف أو القتل أو السرقة. ممنوع إرسال عبارات خارج التمثيل أو مخاطبة أشخاص بأسمائهم عبر الجوال.</li>
+                        <li><strong>الاحترام والأخلاق:</strong> ممنوع الشتم والقذف بالأعراض والكلام البذيء أو الطائفي أو السياسي أو الديني أو القبلي سواء صوتياً أو كتابياً.</li>
+                        <li><strong>احترام كرامة الإنسان:</strong> ممنوع المبالغة في الإهانة أو استخدام كلمات فيها تجريح أو تمس كرامة الإنسان سواء بالكلام أو بالحركات.</li>
+                        <li><strong>حماية الأهل:</strong> ممنوع المساس أو التعرض للأهل (الأب، الأم، الأخت ...إلخ) بكلمات مباشرة أو غير مباشرة ولا يسمح بهذا التمثيل نهائياً.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rule-card">
+                <div class="rule-title">قوانين الإجرام والخدمات الرسمية</div>
+                <div class="rule-content">
+                    <ul>
+                        <li><strong>شروط التحاور:</strong> ممنوع القتل بدون سبب أو القتل بمجرد التهديد والعد من واحد لثلاثة (ضروري تتحاور مع اللاعبين).</li>
+                        <li><strong>تعديل السلوك الإجرامي:</strong> يمنع الخطف أو ممارسة النشاط الإجرامي إذا كان عدد الشرطة والحرس قليلاً أو غير موجودين بالسيرفر.</li>
+                        <li><strong>السيناريو الأُحادي:</strong> ممنوع عمل سيناريو أحادي والتضييق على اللاعبين مثل الخطف واحتجاز اللاعب لفترة طويلة أو عمل سيناريو سرقة لوقت طويل وإرهاق اللاعبين لمصلحتك فقط.</li>
+                        <li><strong>المركبات الرسمية:</strong> ممنوع سرقة مركبات الطوارئ والعسكرية والطبية.</li>
+                        <li><strong>تقدير القطاعات الخدمية:</strong> الشرطي والحارس والمسعف لا يستلم راتب حقيقي ليلعب معك وهو انسان لديه التزامات وحياة حقيقية. قدر بأنه قد تمضي ساعات بدون شرطة وحرس وإسعاف.</li>
+                        <li><strong>انتحال صفة المراقبين:</strong> ممنوع ارتداء ملابس المعتمد للمراقبين أو انتحال صفة المراقب سواء بحسن نية أو من غير قصد.
+                            <div class="rule-warning">العقوبة: غرامة مالية وسجن أو بان يصل إلى النهائي.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rule-card">
+                <div class="rule-title">البنود المالية والمركبات (26 - 29)</div>
+                <div class="rule-content">
+                    <ul>
+                        <li><strong>بند 26:</strong> ممنوع إخراج مركبتين أو أكثر من الكراج لنفس المالك، ومسؤوليتك تخزين المركبة في الكراج أو الاستعانة بالجهات المختصة.</li>
+                        <li><strong>بند 27:</strong> يمنع توزيع سيارات أو تبادلها مثل إخراج المركبة لصديقك للتنقل أو تصريف مركباتك بأقل ثمن لأصدقائك عن طريق بيعها في المستعمل.</li>
+                        <li><strong>بند 28:</strong> يمنع توزيع أموالك أو تسليف مبالغ كبيرة بين اللاعبين ولن يقبل أي عذر مهما كان.</li>
+                        <li><strong>بند 29:</strong> يمنع توزيع أدوات العمل والأسلحة أو أي شيء ذو قيمة مالية وبكميات كبيرة على لاعب آخر.</li>
+                    </ul>
+                    <div class="rule-warning">
+                        عقوبة مخالفة البنود (26، 27، 28): تصفير الطرفين وبان 30 يوم ولن يقبل أي عذر مهما كان.
+                    </div>
+                </div>
+            </div>
+
+            <div class="rule-card">
+                <div class="rule-title">قوانين المطاردات والقيادة والإخلاء</div>
+                <div class="rule-content">
+                    <strong>يمنع التالي في حال مطاردتك من الجهات الأمنية:</strong>
+                    <ul>
+                        <li>الخروج عن الطريق إلى مسطحات غير مخصصة للقيادة عليها مثل الجبال.</li>
+                        <li>الهروب إلى أي مسطح مائي دون وجود قارب مجهز للهرب.</li>
+                        <li>الاختباء في البيت، تخزين المركبة، تصليح المركبة، أو إخراج مركبة جديدة.</li>
+                        <li>الاستمرار بالهرب عن طريق الجو أو البحر دون التوقف أو دون التوجه إلى مكان محدد.</li>
+                        <li>الهروب بالأنفاق تحت الأرض أو المترو.</li>
+                    </ul>
+                    <br>
+                    <strong>القيادة غير الواقعية (ممنوعة):</strong>
+                    <ul>
+                        <li>التصديم المستمر أو عكس الطريق المستمر.</li>
+                        <li>قيادة أوف رود (Off-road) بمركبة غير مخصصة.</li>
+                        <li>تعديل مركبة مقلوبة باستخدام مركبة غير مخصصة لذلك.</li>
+                        <li>تقطيع الإشارات المستمر في محيط فيه لاعبين أو دوريات شرطة.</li>
+                        <li>تعمد المخالفات المرورية بقصد طلب المطاردة والتهرب باستخدام المخالفات.</li>
+                        <li>يمنع تواجد أو قيادة مركبات السوبر والسبورت والاس كلاس في منطقة ساندي وبليتو والطرق الرملية والشواطئ.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rule-card">
+                <div class="rule-title">المخالفات العامة والعقوبات الفورية</div>
+                <div class="rule-content">
+                    <ul>
+                        <li><strong>مناطق الاستنفار:</strong> الخروج من منطقة الاستنفار إلزامي ويمنع دخولها من الخارج. وفي حال صعوبة الخروج يجب استعمال حركة استسلام كامل طوال الوقت.</li>
+                        <li><strong>الكراج العمومي:</strong> يمنع التخريب في الكراج العمومي ومضايقة اللاعبين، ويجب الانتظار في حال وجود شخص يحاول تخزين أو إخراج مركبة.</li>
+                        <li><strong>الإجرام بلباس العمل:</strong> الإجرام بلبس عمل أو في مصنع العمل (مثل الأخشاب أو الدواجن) جريمة يعاقب عليها قانون الشرطة/الحرس، وتكرارها مخالف للنظام العام وتتدخل فيه الرقابة.</li>
+                        <li><strong>إلغاء الاتصال (Combat Logging):</strong> ممنوع الفصل قبل انتهاء السيناريو أو أثناء المطاردة أو اعتقالك من الأمن.
+                            <div class="rule-warning">عقوبة الفصل أثناء السيناريو: حظر من دخول السيرفر لمدة 14 يوم.</div>
+                        </li>
+                        <li><strong>طلب إنعاش غير قانوني:</strong> يمنع طلب إنعاش بسبب الغرق أو الموت أو الإنفجار سواء في البر أو البحر أو مكان مقطوع (القاعدة العامة: الخسارة جزء من اللعبة).</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 - سيرفر DUBAI CFW</p>
+    </footer>
+
+</body>
+</html>
