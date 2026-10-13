@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قوانين سيرفر Dubai CFW</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #080b12;
+            --card-bg: #0f1522;
+            --accent-blue: #00d2ff;
+            --glow-blue: #0072ff;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            padding-bottom: 50px;
+            background-image: radial-gradient(circle at 50% 0%, rgba(0, 114, 255, 0.15) 0%, transparent 50%);
+        }
+
+        /* Header & Logo Section */
+        header {
+            padding: 40px 20px 20px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .logo-container {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px auto;
+            position: relative;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+            box-shadow: 0 0 25px rgba(0, 210, 255, 0.5), 0 0 50px rgba(0, 114, 255, 0.3);
+            animation: pulse-glow 3s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                box-shadow: 0 0 20px rgba(0, 210, 255, 0.4), 0 0 40px rgba(0, 114, 255, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 35px rgba(0, 210, 255, 0.8), 0 0 70px rgba(0, 114, 255, 0.5);
+            }
+        }
+
+        .server-title {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-shadow: 0 0 15px var(--accent-blue);
+        }
+
+        .server-subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .rules-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* Rule Cards */
+        .rule-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-right: 4px solid var(--accent-blue);
+            border-radius: 12px;
+            padding: 22px 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .rule-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.15);
+        }
+
+        .rule-title {
+            color: var(--accent-blue);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rule-content {
+            color: var(--text-main);
+            font-size: 1rem;
+        }
+
+        .rule-content ul {
+            list-style: none;
+            padding-right: 10px;
+            margin-top: 10px;
+        }
+
+        .rule-content ul li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-right: 20px;
+        }
+
+        .rule-content ul li::before {
+            content: "✦";
+            color: var(--accent-blue);
+            position: absolute;
+            right: 0;
+            font-size: 0.9rem;
+        }
+
+        .rule-warning {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #f87171;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .safe-zone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .safe-zone-item {
+            background: rgba(0, 210, 255, 0.05);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .server-title {
+                font-size: 1.7rem;
+            }
+            .logo-container {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <!-- الشعار المرفق -->
+            <img src="02fc6619-6661-47c2-80bf-f9324037e6e6-removebg-preview.jpg" alt="Dubai CFW Logo">
+        </div>
+        <div class="server-title">DUBAI CFW</div>
+        <div class="server-subtitle">القوانين العامة لتمثيل الشخصية (Roleplay)</div>
+    </header>
+
+    <div class="container">
+        <div class="rules-grid">
+
+            <!-- 1. الرول بلاي -->
+            <div class="rule-card">
+                <div class="rule-title">الرول بلاي ( التمثيل ) - Roleplay</div>
+                <div class="rule-content">
+                    تقمص وتمثيل الشخصية قولاً وفعلاً مع مراعاة مجريات أحداث اللعبة وما يدور من حولك في المنطقة (باختصار تعيش الدور).
+                    <br><br>
+                    <span style="color: var(--accent-blue); font-weight: 600;">★ يعتبر التمثيل إلزامي للجميع (باستثناء المراقبين) وشرط جوهري في السيرفر.</span>
+                </div>
+            </div>
+
+            <!-- 2. RDM -->
+            <div class="rule-card">
+                <div class="rule-title">القتل العشوائي - RDM</div>
+                <div class="rule-content">
+                    قتل الأشخاص دون سبب أو تهديد أو بطريقة عشوائية.
+                    <div class="rule-warning">القتل العشوائي ممنوع ومخالف للنظام العام للسيرفر.</div>
+                </div>
+            </div>
+
+            <!-- 3. VDM -->
+            <div class="rule-card">
+                <div class="rule-title">الدهس أو الصدم بالمركبة - VDM</div>
+                <div class="rule-content">
+                    استخدام المركبة كسلاح لقتل الأشخاص.
+                    <div class="rule-warning">القتل عن طريق الصدم بالمركبة ممنوع ومخالف للنظام العام للسيرفر.</div>
+                </div>
+            </div>
+
+            <!-- 4. تقدير الحياة -->
+            <div class="rule-card">
+                <div class="rule-
